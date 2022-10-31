@@ -2,9 +2,12 @@
 
 window.addEventListener('DOMContentLoaded', init);
 
-function init() {
+const jsConfetti = new JSConfetti();
 
-  const jsConfetti = new JSConfetti();
+function init() {
+  
+
+  
 
   // if no value change is happening
   var curr_volume = document.getElementById('#volume');
@@ -58,9 +61,9 @@ function init() {
   }); 
 
   document.querySelector('button').addEventListener('click', (event) =>{
-    var party_horn = document.querySelector('img');
-    if (party_horn.src == 'assets/images/party-horn.svg'){
-      jsConfetti.addConfetti()
+    var party_horn = document.querySelector('#horn-select');
+    if (party_horn.value == 'party-horn'){
+      jsConfetti.addConfetti();
       audio.play();
     }
     else {
