@@ -55,12 +55,14 @@ function init() {
         var img = document.querySelector('img');
         img.src = 'assets/images/smiling-open.png';
       }
-      
+      utterThis.addEventListener('end', change_face);
     }
 
   });
 
-  function change_face(){var img = document.querySelector('img');
-  img.src = 'assets/images/smiling.png';}
+  function change_face(){
+    var img = document.querySelector('img');
+      img.src = 'assets/images/smiling.png';
+    }
   
 }
